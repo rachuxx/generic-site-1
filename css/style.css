@@ -1,0 +1,266 @@
+/* global */
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+/* cleaning DIV*/
+
+.clear {
+  clear: both;
+}
+
+body > header {
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255, 0.8);
+  z-index: 100;
+}
+
+body > header nav,
+body > header figure {
+  display: inline-block;
+}
+
+body > header figure {
+  float: left;
+}
+
+body > header figure img {
+  height: 30px;
+  margin: 10px -20px 10px 15px;
+}
+
+body > header nav ul li {
+  display: inline-block;
+  line-height: 50px;
+  text-decoration: none;
+}
+body > header nav ul li:hover {
+  background-color: rgba(53,53,53, 0.8);
+  color: #FFFFFF;
+}
+
+body > header nav ul li a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+body > header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 50px;
+  padding: 15px 15px;
+}
+
+.smoothed {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#main {
+  background: #ccc url("../images/1.jpg") 50% no-repeat;
+  z-index: 1;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#info {
+  background: #ccc url("../images/5.jpg") 50% no-repeat;
+  background-size: cover;
+  height: 120%;
+  background-position: center top;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#info,
+#offer,
+#table,
+#form {
+  z-index: 2;
+}
+
+#offer,
+#table,
+#form {
+  position: relative;
+  background-color: #fff;
+}
+
+#main > div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+#main > div h1,
+#main > div h2,
+#main > div p {
+  font-weight: 300;
+  text-align: center;
+}
+
+#info > div {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+#info > div h2,
+#info > div p {
+  text-align: right;
+  color: #fff;
+}
+
+#table > div,
+#form > div {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#table > div > h2 {
+  margin-top: 0;
+}
+
+#table table {
+  width: 100%;
+}
+
+#table table tr th,
+#table table tr td {
+  border: 1px solid #555;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#table table tbody tr:nth-child(odd) {/* wartości even i odd, dla elementow parzystych i nieparzystych */
+  background-color: #ccc;
+}
+
+#table table tbody tr td[rowspan="2"] {
+  vertical-align: middle;/* pozycjonowanie tekstu pionowo w komorce tabeli */
+}
+
+#table table tr th {
+  font-weight: 700;
+}
+
+#table table thead tr th {
+  font-size: 24px;
+}
+
+#table table tfoot tr th {
+  font-size: 11px;
+}
+
+.facebookBtn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  margin: 30px;
+  border-radius: 5px;
+}
+
+.styledSelect {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: url("../images/arrow.png") 98% 50% no-repeat;
+  background-size: 16px 16px;
+}
+
+.styledSelect select {
+  border: 0 !important;
+  width: 110% !important;
+  background-color: transparent;
+}
+
+footer {
+  display: flex; /* oznaczenie elementu jako konter elementow html, w ktorym mozna w elastyczny sposob zarządzać sposobem wyświetlania*/
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+  flex-flow: row nowrap; /* jest to właściwość zawierająca połączenie dwoch powyzszych; pierwsza wartość oznacza, ze elementy wewnątrz układają sie poziomo, a druga, ze elementy kiedy sie nie zmieszczą w jednej linii, nie zostaną przesuniete do nowej, tylko ich szerokość zostanie zmniejszona */
+  align-items: stretch; /* elementy wewnetrzne zostaną rozciągniete na całą wysokość elementy kontenera */
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+footer > div {
+  width: 50%;
+}
+
+.flex1 {
+  order: 2; /* ustalanie kolejności */
+}
+.flex2 {
+  order: 3;
+}
+.flex3 {
+  order: 1;
+}
+
+#scroller_container div
+{
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 2;
+    color: #545454;
+}
+
+#starter {
+  display: none;
+}
+
+.fading_in
+{
+    opacity:0;
+    font-family: 'Permanent Marker', cursive;
+}

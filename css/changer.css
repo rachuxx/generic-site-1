@@ -1,0 +1,110 @@
+/* changer*/
+
+.anim_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 35px;
+  line-height: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #545454;
+  height: 160px;
+  overflow:hidden;
+}
+
+.anim_visible {
+  font-weight:600;
+  overflow:hidden;
+  height:40px;
+  padding:0 40px;
+
+}
+.anim_visible:before {
+    content:'<';
+    left: 0;
+    line-height:40px;
+}
+.anim_visible:after {
+    content:'>';
+    position:absolute;
+    right: 0;
+    line-height:40px;
+}
+
+.anim_visible:after, .anim_visible:before {
+    position:absolute;
+    top:0;
+    color: #A4;
+    font-size:42px;
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2.4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+}
+
+.changer_content {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding-left: 150px;
+}
+
+ul.changer {
+  margin-top: 0;
+  padding-left: 0px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 12s;
+  animation-iteration-count: 2;
+}
+
+li.changer {
+  line-height:40px;
+  margin:0;
+  transform:translateY(-50%)
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-webkit-keyframes change {
+  0%, 17%, 100% {transform:translateY(0%);}
+  23%,37% {transform:translateY(-38%);}
+  43%,57% {transform:translateY(-63%);}
+  63%,77% {transform:translateY(-38%);}
+  86%,97% {transform:translateY(0%);}
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 17%, 100% {transform:translateY(0%);}
+  23%,37% {transform:translateY(-38%);}
+  43%,57% {transform:translateY(-63%);}
+  63%,77% {transform:translateY(-38%);}
+  86%,97% {transform:translateY(0%);}
+}
+
+
+.greeter {
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  line-height: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #545454;
+  height: 160px;
+  overflow:hidden;
+  font-family: 'Lato', sans-serif;
+}

@@ -1,0 +1,120 @@
+#form form input[type="text"],
+#form form input[type="password"],
+#form form input[type="email"],
+#form form textarea,
+#form form select {
+  width: 100%;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+#form form input[type="text"]:focus,
+#form form input[type="password"]:focus,
+#form form input[type="email"]:focus,
+#form form textarea:focus,
+#form form select:focus {
+  border-color: #000;
+}
+
+#form form input[type="text"],
+#form form input[type="password"],
+#form form input[type="email"],
+#form form select {
+  height: 30px;
+  line-height: 30px;
+}
+
+#form form textarea {
+  height: 100px;
+}
+
+#form form label {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#form form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#form form .buttonSection {
+    text-align: right;
+    background: #eee;
+    padding: 20px;
+}
+
+#form form  input[type="submit"] {
+  border: 1px solid #ccc;
+  background: -webkit-linear-gradient(top, #fff, #ccc);
+  background: -moz-linear-gradient(top, #fff, #ccc);
+  background: linear-gradient(to bottom, #fff, #ccc);
+  color: #333;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+}
+
+#form form input[type="submit"]:hover {
+  border-color: #333;
+  background: -webkit-linear-gradient(top, #ccc, #fff);
+  background: -moz-linear-gradient(top, #ccc, #fff);
+  background: linear-gradient(to bottom, #ccc, #fff);
+}
+
+.przycisk {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  /* funkcje gradientu */
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(top,  #1e5799 35%, #7db9e8 82%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #1e5799 35%,#7db9e8 82%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #1e5799 35%,#7db9e8 82%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.styledCheckbox {
+  /* całkowite wyłączenie widoczności. Inne mozliwości:
+    visibility: hidden;
+    opacity: 0;
+    ale powyzsze rozwiązania pozostawiają przestrzeń po danym elemencie.
+   */
+  display: none;
+}
+
+.styledCheckbox + label span {
+  background: url("../images/sprite.png") no-repeat;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-position: -22px -24px;
+  cursor: pointer;
+}
+
+.styledCheckbox:checked + label span {
+  background-position: 0 -24px;
+}
+
+.styledRadio {
+  /* całkowite wyłączenie widoczności. Inne mozliwości:
+    visibility: hidden;
+    opacity: 0;
+    ale powyzsze rozwiązania pozostawiają przestrzeń po danym elemencie.
+   */
+  display: none;
+}
+
+.styledRadio + label span {
+  background: url("../images/sprite.png") no-repeat;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-position: -b 0px;
+  cursor: pointer;
+}
+
+.styledRadio:checked + label span {
+  background-position: 0 0px;
+}

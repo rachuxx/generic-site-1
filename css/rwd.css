@@ -1,0 +1,73 @@
+@media screen and (min-width: 631px) {
+  #menuhidden > p {
+    display: none;
+  }
+}
+
+/* media queries - @media: oznaczenie media query; screen: oznaczenie, ze dotyczy urządzeń ktrore mają wyświetlacz; and - łączenie warunkow; (min-width: 0px) - warunek dotyczący szerokości ekranu; kiedy wszystkie warunki są spełnione, ponizsze deklaracje css zostają przypisane dla konkretnych elementow html */
+@media screen and (min-width: 0px) and (max-width: 630px) {
+  #menuhidden  {
+    display: block;
+  }
+
+  #menuhidden > p {
+  	font-size: 26px;
+  	padding: 0 20px;
+  	display: inline-block;
+
+    margin: 13px 0;
+    float: right;
+  }
+
+  #menuhidden:hover {
+	  display: block;
+  }
+
+  #menuhidden:hover nav {
+    display: block;
+    clear: both;
+  }
+
+  body > header figure img {
+    height: 50px;
+  }
+
+  body > header nav  {
+    display: none;
+  }
+
+  body > header nav ul {
+	  height: auto;
+  }
+
+  body > header nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  body > header {
+    height: auto;
+    background: #fff;
+  }
+
+  #offer > div article {
+    float: none;
+    width: 100%;
+  }
+
+  .mainMenu:hover ul {
+    display: block;
+  }
+
+  .mainMenu ul {
+    display: none;
+  }
+
+  #table .ovTable {
+    overflow: scroll;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,180 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    background-color: #FFF;
+}
+
+/*.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 73%;
+    width: 80px;
+    height: 4px;
+    margin-left: -115px;
+    content: '';
+    background-color: #000;
+}*/
+
+.box {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  perspective: 400px;
+  -webkit-perspective: 400px;
+}
+
+.tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box:hover > .tile {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.tile-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  color: #FFF;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tile-front:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    position: absolute;
+    content: '';
+}
+
+.tile-front:after {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    background-color: #FFF;
+    position: absolute;
+    content: '';
+}
+
+.tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 65px;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: rgba(98,60,252, 0.8);
+  background-position: cover;
+  box-shadow: -20px rgba(0, 0, 0, 1),
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+}
+
+.tile-back-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/flex_2.png");
+  background-size: 150%;
+  background-position: center;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tile-type-1 {
+  background-image: url("../images/filler1.jpg");
+}
+.tile-type-2 {
+  background-image: url("../images/filler2.jpg");
+}
+.tile-type-3 {
+  background-image: url("../images/filler3.jpg");
+}
+.tile-type-4 {
+  background-image: url("../images/filler4.jpg");
+}
+
+
+#info,
+#offer,
+#table,
+#form {
+  z-index: 2;
+}
+
+#offer,
+#table,
+#form {
+  /*position: relative;*/
+  background-color: #fff;
+}
+
+.tile-container {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  float: left;
+  position: relative;
+  left: -50%;
+  padding: 10px;
+
+}
+
+.tile-wrapper {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+
+#offer > div,
+#table > div,
+#form > div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.clear {
+  clear: both;
+}

@@ -1,0 +1,222 @@
+body {
+    color: #000;
+    background-color: #FFF;
+}
+
+/*.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 73%;
+    width: 80px;
+    height: 4px;
+    margin-left: -115px;
+    content: '';
+    background-color: #000;
+}*/
+
+#offer,
+#table,
+#form {
+  background-color: #fff;
+}
+
+.tile-container {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-flow: row wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.box {
+  perspective: 300px;
+  -webkit-perspective: 300px;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.box:hover {
+  z-index: 5
+}
+
+/*.box-1 {
+  z-index: 3
+}
+.box-2 {
+  z-index: 2
+}
+.box-3 {
+  z-index: 3
+}
+.box-4 {
+  z-index: 2
+}*/
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .box-1,
+  .box-3 {
+    margin: 10px 10px 10px 120px;
+  }
+  .box-2,
+  .box-4 {
+    margin: 10px 120px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tile-container {
+    flex-flow: column wrap;
+  }
+}
+
+.tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box:hover > .tile {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.tile-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  color: #FFF;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  /*-webkit-transform: translateZ(0); */
+  /*-webkit-transform-style: preserve-3d;*/
+}
+
+/*.no-flick{
+  -webkit-transform:translate3d(0,0,0);
+}*/
+
+.tile-front-1 {
+  background-image: url("../images/filler1.jpg");
+}
+.tile-front-2 {
+  background-image: url("../images/filler8.jpg");
+}
+.tile-front-3 {
+  background-image: url("../images/filler10.jpg");
+}
+.tile-front-4 {
+  background-image: url("../images/filler7.jpg");
+}
+
+.tile-front:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    position: absolute;
+    content: '';
+}
+
+.tile-front:after {
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    background-color: #FFF;
+    position: absolute;
+    content: '';
+}
+
+.tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 65px;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+  color: #FFF;
+  box-shadow: -20px rgba(0, 0, 0, 1),
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.5);
+}
+
+.tile-back-1 {
+  background-color: rgba(137,87,198, 0.8);
+}
+.tile-back-2 {
+  background-color: rgba(198,156,87, 0.8);
+}
+.tile-back-3 {
+  background-color: rgba(198,184,87, 0.8);
+}
+.tile-back-4 {
+  background-color: rgba(60,201,95, 0.8);
+}
+
+.tile-back-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: center;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tile-back-overlay-1 {
+  background-image: url("../images/flex_2.png");
+}
+.tile-back-overlay-2 {
+  background-image: url("../images/security.jpg");
+}
+.tile-back-overlay-3 {
+  background-image: url("../images/strength.jpg");
+}
+.tile-back-overlay-4 {
+  background-image: url("../images/happiness.jpg");
+}
